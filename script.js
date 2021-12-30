@@ -1,10 +1,10 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 	/** ******************************
 		* Simple WYSIWYG
 		****************************** **/
-	$('#editControls a').click(function(e) {
+	$('#editControls a').click(function (e) {
 		e.preventDefault();
-		switch($(this).data('role')) {
+		switch ($(this).data('role')) {
 			case 'h1':
 			case 'h2':
 			case 'h3':
@@ -20,12 +20,12 @@ jQuery(document).ready(function($) {
 		$("#editorCopy").val(textval);
 	});
 
-	$("#editor").keyup(function() {
+	$("#editor").keyup(function () {
 		var value = $(this).html();
 		$("#editorCopy").val(value);
 	}).keyup();
-	
-	$('#checkIt').click(function(e) {
+
+	$('#checkIt').click(function (e) {
 		e.preventDefault();
 		alert($("#editorCopy").val());
 	});
@@ -51,12 +51,16 @@ For Copy Button
 
 function copyToClip(str) {
 	function listener(e) {
-	  e.clipboardData.setData("text/html", str);
-	  e.clipboardData.setData("text/plain", str);
-	  e.preventDefault();
+		e.clipboardData.setData("text/html", str);
+		e.clipboardData.setData("text/plain", str);
+		e.preventDefault();
 	}
 	document.addEventListener("copy", listener);
 	document.execCommand("copy");
 	document.removeEventListener("copy", listener);
-  };
-  
+};
+
+
+setTimeout(function () {
+	document.getElementById("editor").focus();
+}, 0);
