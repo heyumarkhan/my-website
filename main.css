@@ -71,12 +71,6 @@
 	}
 }
 
-.logo {
-	max-width: 480px;
-	width: 80%;
-	display: block;
-	margin: 0 auto;
-}
 
 h3 {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -85,32 +79,4 @@ h3 {
 	text-transform: uppercase;
 	font-weight: 100;
 	color: rgba(#000, 0.8);
-}
-.social {
-	ul {
-		list-style-type: none;
-		padding: 0;
-		li {
-			display: inline-block;
-			margin: 5px;
-			a {
-				img {
-					width: 28px;
-					&:hover {
-						opacity: 0.7;
-					}
-				}
-			}
-		}
-	}
-}
-.copy-right {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	text-align: center;
-	padding-bottom: 15px;
-	font-size: 12px;
-	color: rgba(#000, 0.5);
 }
