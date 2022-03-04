@@ -1,0 +1,342 @@
+<!-- Needs to open new tab for upon click like done for AC contact search-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <title>Quikr</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg" />
+</head>
+
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container h-100 bg-success">
+        <div class="row h-100 justify-content-center align-items-center">
+            <!-- ActiveCampaign Contact Search -->
+            <div class="col-sm-6 ">
+                <h4 class="card-title">Contact Search</h5>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3   mb-2">
+                            <input type="email" class="form-control" id="activeCampaignUserEmailForContact"
+                                placeholder="User Email">
+                            </br>
+                            <input class="form-check-input" type="checkbox" value="yes" id="openInNewTab">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Open in new tab
+                            </label>
+                            <script>
+                                function additon() {
+                                    let a = document.getElementById('activeCampaignUserEmailForContact').value;
+                                    let d = document.getElementById('openInNewTab').value;
+                                    let b = a.replace("@", "%40");
+                                    let c = "https://osamaejaz1.activehosted.com/app/contacts?limit=100&q=" + b;
+                                    if (d == "yes") {
+                                        window.open(c, '_blank').focus();
+                                    }
+                                }
+                            </script>
+                        </div>
+                        <a onclick="additon()" class="btn btn-sm mb-2"><img class="card-img-top"
+                                src="images/activecampaign-logo.webp" alt="Card image cap" style="width:20%"></a>
+                    </form>
+            </div>
+            <!-- Basecamp Search -->
+            <div class="col-sm-6">
+                <div class="card-body">
+                    <h4 class="card-title">Basecamp Campfire</h4>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" id="basecampElement" placeholder="Basecamp Element">
+                            <input type="text" class="form-control" id="basecampUserFirstName" placeholder="User Name">
+                            <script>
+                                function basecampUrl() {
+                                    let Element = document.getElementById("basecampElement").value;
+                                    console.log(Element);
+                                    let Name = document.getElementById("basecampUserFirstName").value;
+                                    if (Element == "ping") {
+                                        let ping = "https://3.basecamp.com/4644022/circles/";
+                                        let circle = "";
+                                        switch (Name) {
+                                            case "huda":
+                                                circle = "17708643";
+                                                break;
+                                            case "usama":
+                                                circle = "17681240";
+                                                break;
+                                            case "ayesha":
+                                                circle = "17694936";
+                                                break;
+                                            case "kanza":
+                                                circle = "23845421";
+                                                break;
+                                            case "zahid":
+                                                circle = "19204966";
+                                                break;
+                                            case "samar":
+                                                circle = "18520183";
+                                                break;
+                                            case "inaya":
+                                                circle = "20241902";
+                                                break;
+                                            case "alveena":
+                                                circle = "24673486";
+                                                break;
+                                            case "najma":
+                                                circle = "21950454";
+                                                break;
+                                            case "awais":
+                                                circle = "17685485";
+                                                break;
+                                            case "awais butt":
+                                                circle = "25534929";
+                                                break;
+                                            case "khalid":
+                                                circle = "25436984";
+                                                break;
+                                            case "bilal":
+                                                circle = "25078692";
+                                                break;
+                                            case "azan":
+                                                circle = "25805103";
+                                                break;
+                                            case "eisha":
+                                                circle = "25805115";
+                                                break;
+                                            case "noor":
+                                                circle = "19307361";
+                                                break;
+                                            case "farhan":
+                                                circle = "23482936";
+                                                break;
+                                            case "yashal":
+                                                circle = "25805155";
+                                                break;
+                                            default:
+                                                console.log("Name doesn't match");
+                                                break;
+                                        }
+                                        let basecampDirectUrl = ping + circle;
+                                        return basecampDirectUrl;
+
+                                    } else if (Element == "campfire") {
+                                        let campfire = "https://3.basecamp.com/4644022/projects/";
+                                        let buckets = "";
+                                        let chats = "";
+                                        switch (Name) {
+                                            case "SocialBu HQ":
+                                                buckets = "17678430";
+                                                chats = "2791196341";
+                                                break;
+                                            case "Managers":
+                                                buckets = "17678461";
+                                                chats = "2791201703";
+                                                break;
+                                            case "Product Management":
+                                                buckets = "22965346";
+                                                chats = "3915414234";
+                                                break;
+                                            case "Sales":
+                                                buckets = "20422007";
+                                                chats = "3381077717";
+                                                break;
+                                            case "Build Online Reputation":
+                                                buckets = "20646842";
+                                                chats = "3427868489";
+                                                break;
+                                            case "Customer Success":
+                                                buckets = "17680134";
+                                                chats = "2791571538";
+                                                break;
+                                            case "Designing":
+                                                buckets = "17684412";
+                                                chats = "2792520222";
+                                                break;
+                                            case "LinkMngr":
+                                                buckets = "21158219";
+                                                chats = "3535921230";
+                                                break;
+                                            case "LiveChat Monitoring":
+                                                buckets = "22996787";
+                                                chats = "3922316683";
+                                                break;
+                                            case "Marketing":
+                                                buckets = "17678460";
+                                                chats = "2791201687";
+                                                break;
+                                            case "Development":
+                                                buckets = "17678791";
+                                                chats = "2791260950";
+                                                break;
+
+                                            default:
+                                                break;
+                                        }
+                                    } else if (Element == "team") {
+                                    }
+                                    let testingUrl;
+                                }
+                            </script>
+                        </div>
+
+                        <!-- <button
+                            onclick='document.getElementById("para2").innerHTML =  basecampUrl();'>Calculate</button>
+                        <p id="para2">testing</p> -->
+
+
+                        <a onclick="location.href=this.href+basecampUrl();return false;" class="btn btn-sm mb-2"><img
+                                class="card-img-top" src="https://avatars.githubusercontent.com/u/13131?s=280&v=4"
+                                alt="Card image cap" style="width:20%"></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container h-100 bg-success">
+        <div class="row h-100 justify-content-center align-items-center">
+            <!-- SocialBu Instagram Clearing Session -->
+            <div class="col-sm-6 ">
+                <h4 class="card-title">Clear IG Session</h5>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" id="socialbuUserEmailForSession"
+                                placeholder="User Email">
+                            <input type="text" class="form-control" id="socialbuUserInstaUsername"
+                                placeholder="Insta Username">
+                        </div>
+                        <button
+                            onclick="copyToClip(document.getElementById('socialbuUserEmailForSession').value,document.getElementById('socialbuUserInstaUsername').value )"
+                            class="btn btn-sm mb-2">Copy</button>
+                        <script>
+                            function copyToClip(str, st1) {
+                                let str2 = "https://www.socialbu.com/app/clear_ig_session/" + str + "/" + st1;
+                                function listener(e) {
+                                    e.clipboardData.setData("text/html", str2);
+                                    e.clipboardData.setData("text/plain", str2);
+                                    e.preventDefault();
+                                }
+                                document.addEventListener("copy", listener);
+                                document.execCommand("copy");
+                                document.removeEventListener("copy", listener);
+                            };
+                        </script>
+                    </form>
+            </div>
+            <!-- SocialBu Login As -->
+            <div class="col-sm-6 ">
+                <h4 class="card-title">Login As</h5>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" id="socialbuUserEmailForLogin"
+                                placeholder="User Email">
+                        </div>
+                        <button onclick="copyToClipForLogin(document.getElementById('socialbuUserEmailForLogin').value)"
+                            class="btn btn-sm mb-2">Copy</button>
+                        <script>
+                            function copyToClipForLogin(str) {
+                                let str2 = "https://www.socialbu.com/app/login_as/" + str;
+                                function listener(e) {
+                                    e.clipboardData.setData("text/html", str2);
+                                    e.clipboardData.setData("text/plain", str2);
+                                    e.preventDefault();
+                                }
+                                document.addEventListener("copy", listener);
+                                document.execCommand("copy");
+                                document.removeEventListener("copy", listener);
+                            };
+                        </script>
+                    </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <div class="container h-100 bg-success">
+        <div class="row h-100 justify-content-center align-items-center">
+            <!-- Stripe User Search -->
+            <div class="col-sm-6 ">
+                <h4 class="card-title">Customer Search</h4>
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="email" class="form-control" id="stripeUserEmail" placeholder="User Email">
+                        <script>
+                            function ulrForStripeContactSearch() {
+                                let a = document.getElementById("stripeUserEmail").value;
+                                let b = a.replace("@", "%40");
+                                let c = "https://dashboard.stripe.com/search?query=" + b;
+                                console.log(c);
+                                return c;
+                            }
+                        </script>
+                    </div>
+                    <a onclick="location.href=this.href+ulrForStripeContactSearch();return false;"
+                        class="btn btn-sm mb-2"><img class="card-img-top" src="images/stripe.png" alt="Card image cap"
+                            style="width:10%"></a>
+                </form>
+            </div>
+            <!-- ActiveCampaign Deal Search -->
+            <div class="col-sm-6 ">
+                <h4 class="card-title">Deal Search</h5>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="email" class="form-control" id="activeCampaignUserEmailForDeal"
+                                placeholder="User Email">
+                            <script>
+                                function ulrForDealSearch() {
+                                    let a = document.getElementById("activeCampaignUserEmailForDeal").value;
+                                    let b = a.replace("@", "%40");
+                                    let c = "https://osamaejaz1.activehosted.com/app/deals?search=" + b;
+                                    console.log(c);
+                                    return c;
+                                }
+                            </script>
+                        </div>
+                        <a onclick="location.href=this.href+ulrForDealSearch();return false;"
+                            class="btn btn-sm mb-2"><img class="card-img-top" src="images/activecampaign-logo.webp"
+                                alt="Card image cap" style="width:20%"></a>
+                    </form>
+            </div>
+            <!-- HelpScout Search -->
+            <div class="col-sm-6 ">
+                <h4 class="card-title">HelpScout Search</h5>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" id="searchContentForHelpScout"
+                                placeholder="User Email">
+                            <script>
+                                function ulrForDealSearch() {
+                                    let a = document.getElementById("searchContentForHelpScout").value;
+                                    let b = a.replace("@", "%40");
+                                    let c = "https://secure.helpscout.net/search/?query=" + b;
+                                    console.log(c);
+                                    return c;
+                                }
+                            </script>
+                        </div>
+                        <a onclick="location.href=this.href+ulrForDealSearch();return false;"
+                            class="btn btn-sm mb-2"><img class="card-img-top" src="images/activecampaign-logo.webp"
+                                alt="Card image cap" style="width:20%"></a>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js'></script>
+
+</html>
