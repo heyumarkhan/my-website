@@ -306,9 +306,9 @@
                                 }
                             </script>
                         </div>
-                        <a onclick="location.href=this.href+ulrForDealSearch();return false;"
-                            class="btn btn-sm mb-2"><img class="card-img-top" src="images/activecampaign-logo.webp"
-                                alt="Card image cap" style="width:20%"></a>
+                        <a onclick="location.href=this.href+ulrForDealSearch();" class="btn btn-sm mb-2"><img
+                                class="card-img-top" src="images/activecampaign-logo.webp" alt="Card image cap"
+                                style="width:20%"></a>
                     </form>
             </div>
             <!-- HelpScout Search -->
@@ -319,7 +319,7 @@
                             <input type="text" class="form-control" id="searchContentForHelpScout"
                                 placeholder="User Email">
                             <script>
-                                function ulrForDealSearch() {
+                                function ulrForHelpScoutSearch() {
                                     let a = document.getElementById("searchContentForHelpScout").value;
                                     let b = a.replace("@", "%40");
                                     let c = "https://secure.helpscout.net/search/?query=" + b;
@@ -328,7 +328,7 @@
                                 }
                             </script>
                         </div>
-                        <a onclick="location.href=this.href+ulrForDealSearch();return false;"
+                        <a onclick="location.href=this.href+ulrForHelpScoutSearch();return false;"
                             class="btn btn-sm mb-2"><img class="card-img-top" src="images/activecampaign-logo.webp"
                                 alt="Card image cap" style="width:20%"></a>
                     </form>
